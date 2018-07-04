@@ -1,23 +1,26 @@
-import com.sun.glass.ui.SystemClipboard;
-import com.sun.org.apache.xpath.internal.functions.FuncSum;
-
 import javax.swing.*;
-import javax.swing.plaf.PanelUI;
-import java.awt.*;
-import java.util.Set;
 
-import static java.lang.System.console;
-import static java.lang.System.out;
+public class Calculator {
+    public int Add(int a, int b) {
+        return a + b;
+    };
+    public int Substract(int a, int b) {
+        return a - b;
+    };
+    public int Mult(int a, int b) {
+        return a * b;
+    };
+    public int Div(int a, int b) {
+        //return a / b;
+        try {
+            return a / b;
+        } catch (Exception ArithmeticException) {
+            System.out.println("Оленина");
+            //JOptionPane.showMessageDialog(null, "Jo");
+        } return b;
 
-public  class Calculator {
-    public static void main (String[] args) {
-        int a = 2;
-        int b = 0;
-        System.out.println(a + b);
-        System.out.println(a * b);
-        System.out.println(b - a);
-        System.out.println(a / b);
-        
     }
-
 }
+
+
+
